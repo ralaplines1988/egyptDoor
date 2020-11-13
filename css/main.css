@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url('../images/egypt-background.png');
+    background-size: 480px;
+    font-size: 10px;
+}
+
+body {
+    max-width: 960px;
+    background-color: #1f2a53;
+    margin: 0 auto;
+    border: ridge #715532;
+    border-width: 0 15px;
+}
+
+header {
+    position: relative;
+    padding: 70px 0;
+    text-align: center;
+    font-family: 'Lakki Reddy', cursive;
+}
+header>hgroup {
+    position: relative;
+    background-color: #0c3e3a;
+}
+h1 {
+    color: #f4bb47;
+    font-size: 10rem;
+    text-shadow: -1px -1px 3px gray;
+}
+
+h2 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    color: #f4bb47;
+    font-size: 3rem;
+    text-shadow: -1px -1px 3px gray;
+}
+
+.star-container {
+    position: absolute;
+    top:150px;
+    width: 100%;
+    display: flex;
+    z-index: 2;
+}
+  
+.star-container>.fa-star {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    font-size: 32px;
+    color: yellow;
+    text-shadow: 0 0 30px white;
+    animation-name: movingStar;
+    animation-direction: alternate;
+    animation-iteration-count:infinite;
+    transition: transform 3s;
+}
+  
+@keyframes movingStar {
+    from{left:-10px;transform:scale(1);}
+    to{left:30px;transform:scale(1.2);}
+}
+main {
+    position: relative;
+    padding: 50px 0;
+}
+
+.left-god,.right-god {
+    color: white;
+    position: absolute;
+}
+
+.left-god {
+    left: -75px;
+    width: 200px;
+    height: 450px;
+    background-color: transparent;
+    background-image: url("../images/left-god.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: movingLeftGods 3s infinite alternate linear;
+}
+
+.right-god {
+    right: -75px;
+    width: 200px;
+    height: 120px;
+    background-color: transparent;
+    background-image: url("../images/right-god.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: movingRightGods 2.5s infinite alternate linear;
+}
+
+@keyframes movingLeftGods {
+    from{top:210px}
+    to{top:255px}
+}
+
+@keyframes movingRightGods {
+    from{top:300px}
+    to{top:350px}
+}
+
+.info-container {
+    margin: 0 auto ; 
+    width: 450px;
+    height: 450px;
+    background-color: gray;
+    box-shadow: 5px 15px 15px inset black;
+    border: 3px ridge #d19b2e;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.info-box {
+    margin: 0 auto;
+    width: 425px;
+    text-align: center;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    animation: movingText 50s infinite linear;
+    /* animation-play-state: running; */
+}
+
+/* .info-box:hover {
+    animation-play-state: paused;
+} */
+
+@keyframes movingText {
+    from{top:450px;}
+    to {top:-1500px;}
+}
+
+.modeBox {
+    position: relative;
+    text-align: right;
+}
+
+.remainder-cat {
+    position: absolute;
+    color: white;
+    font-size: 1.6rem;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mode-label {
+    position: relative;
+    right:7%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+
+#difficulty {
+    position: relative;
+    appearance: none;
+    width: 60px;
+    height:30px;
+    background-color: gray;
+    border:3px solid #f4bb47;
+    border-radius: 25px;
+    box-shadow: 1px 1px 3px inset black;
+    transition: all .4s;
+    outline: none;
+}
+
+#difficulty::before {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 10%;
+    content: ' ';
+    width: 16px;
+    height:16px;
+    border-radius: 50%;
+    background-color: #f4bb47;
+    box-shadow: 1px 1px 3px black;
+    transition: all .4s;
+}
+
+#difficulty:checked::before {
+    right: 60%;
+}
+.casement-outerBox {
+    margin: 50px 0;
+}
+.casement-container {
+    position: relative;
+    width: 85%;
+    /*padding: 0 0;*/
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.casement>img{
+    display: block;
+    width: 206px;
+    height: 206px;
+    background-color: #f4bb47;
+    border-radius: 50%;
+    cursor: pointer;
+    border:3px ridge #f4bb47;
+}
+.casement {
+    margin: 30px 0;
+    max-width: 206px;
+    max-height: 206px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 transparent;
+    transform: rotate(0deg);
+    transition: box-shadow .5s;
+}
+.casement:hover{
+    box-shadow: 0 0 50px #f4bb47;
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+.trueMirror {
+    box-shadow: 0 0 50px rgb(143, 0, 0);
+}
+
+.startBox {
+    text-align: center;
+}
+
+#startButton {
+    position: relative;
+    display: inline-block;
+    background-color: #f4bb47;
+    padding: 20px;
+    border-width: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#startButton:hover {
+    background-color: #ffca5e;
+}
+
+#startButton:active {
+    top:2.5px;
+}

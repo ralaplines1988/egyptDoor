@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Playfair Display
+Author: Claus Eggers Sørensen
+Url: http://www.fontsquirrel.com/fonts/playfair-display
+
+Font: Roboto Slab
+Author: Christian Robertson
+Url: http://www.fontsquirrel.com/fonts/roboto-slab
